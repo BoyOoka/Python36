@@ -1,10 +1,10 @@
 counter = 100          # 整型变量
-miles   = 1000.0       # 浮点型变量
-name    = "runoob"     # 字符串
+miles = 1000.0       # 浮点型变量
+name = "runoob"     # 字符串
 
-print (counter)
-print (miles)
-print (name)
+print(counter)
+print(miles)
+print(name)
 
 
 a, b, c = 1, 2, "runoob" #为多个对象指定多个变量
@@ -66,3 +66,13 @@ print (dict[2])           # 输出键为 2 的值
 print (tinydict)          # 输出完整的字典
 print (tinydict.keys())   # 输出所有键
 print (tinydict.values()) # 输出所有值
+print(tinydict['site'])
+
+'''
+from selenium import webdriver
+
+driver = webdriver.Firefox()
+driver.get("https://www.baidu.com")
+driver.quit()
+'''
+
