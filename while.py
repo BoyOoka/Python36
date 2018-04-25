@@ -1,3 +1,4 @@
+
 n = 100
 
 sum = 0
@@ -97,3 +98,39 @@ for n in range(2, 10):
     else:
         # 循环中没有找到元素
         print(n, ' 是质数')
+
+#迭代器
+list=[1,2,3,4]
+it = iter(list)    # 创建迭代器对象
+for x in it:
+    print (x, end=" ")
+
+import sys         # 引入 sys 模块
+
+list=[1,2,3,4]
+it = iter(list)    # 创建迭代器对象
+
+while True:
+    try:
+        print (next(it))
+    except StopIteration:
+        sys.exit()
+
+
+import sys
+
+def fibonacci(n): # 生成器函数 - 斐波那契
+    a, b, counter = 0, 1, 0
+    while True:
+        if (counter > n):
+            return
+        yield a
+        a, b = b, a + b
+        counter += 1
+f = fibonacci(10) # f 是一个迭代器，由生成器返回生成
+
+while True:
+    try:
+        print (next(f), end=" ")
+    except StopIteration:
+        sys.exit()
