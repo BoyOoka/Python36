@@ -1,9 +1,11 @@
 def add(a,b):
-    return print(a+b)
+    print(a + b)
+    c = a+b
+    return c
 
 
 add(3,4)
-
+print(add(2,3))
 def ChangeInt( a ):
     a = 10
     return a
@@ -67,3 +69,29 @@ def printinfo( arg1, *vartuple ):
 # 调用printinfo 函数
 printinfo( 10 )
 printinfo( 70, 'ttt',456,'法施工' )
+
+# 可写函数说明
+sum = lambda arg1, arg2,arg3: arg1 + arg2 + arg3
+
+# 调用sum函数
+print("相加后的值为 : ", sum(10, 20,arg3=5))
+print("相加后的值为 : ", sum(20, 20,9))
+
+#-----------------global和nonlocal---------------------------------------
+num = 1
+def fun1():
+    global num  # 需要使用 global 关键字声明
+    print(num)
+    num = 123
+    print(num)
+fun1()
+
+def outer():
+    num = 10
+    def inner():
+        nonlocal num   # nonlocal关键字声明
+        num = 100
+        print(num)
+    inner()
+    print(num)
+outer()
