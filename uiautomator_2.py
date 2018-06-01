@@ -1,7 +1,8 @@
 import uiautomator2 as u2
 import uiautomator2.ext.htmlreport as htmlreport
+import atx
 
-d = u2.connect('192.168.1.54')
+d = u2.connect('192.168.13.149')
 #d = u2.connect_usb("3487e851")
 hrp = htmlreport.HTMLReport(d)
 hrp.patch_click()
