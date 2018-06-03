@@ -1,12 +1,12 @@
 import wda
 
-c = wda.Client('http://192.168.1.100:8100/')
+c = wda.Client('http://localhost:8100/')
 
 # Show status
 print(c.status())
 
 # Press home button
-c.home()
+#c.home()
 
 # Hit healthcheck
 c.healthcheck()
