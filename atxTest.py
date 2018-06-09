@@ -1,8 +1,8 @@
-import atx,time
+import atx, time
 from atx.ext.report import Report
 
-#d = atx.connect('3487e851')
-d = atx.connect('cf76c2f3')
+d = atx.connect('3487e851')
+#d = atx.connect('cf76c2f3')
 d.start_app('com.bianla.international')
 appInfo = d.current_app()
 c = atx.adb_client
