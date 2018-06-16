@@ -3,6 +3,7 @@ import uiautomator2.ext.htmlreport as htmlreport
 import unittest
 import HTMLReport
 from HTMLReport import logger
+import atx
 
 #
 
@@ -11,7 +12,7 @@ from HTMLReport import logger
 
 
 class TestStringMethods(unittest.TestCase):
-    d = u2.connect('192.168.1.53')
+    d = u2.connect('192.168.191.2')
     hrp = htmlreport.HTMLReport(d)
     hrp.patch_click()
     def setUp(self):
