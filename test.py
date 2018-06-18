@@ -8,3 +8,4 @@ token = user_info['User']['token']
 user_action = json.loads(r.get_action(r, user_id, token).read().decode('utf-8'))
 age = user_action['HealthData']['age']
 print(user_id,age)
+print(str(int(time.time()/100)))

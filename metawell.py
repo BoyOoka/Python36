@@ -48,6 +48,30 @@ class Control(object):
                   '巴勒斯坦': '+970', '苏丹': '+249', '也门': '+967', '土耳其': '+90', '塞浦路斯': '+357', '利比亚': \
                       '+218', '阿尔及利亚': '+213', '摩洛哥': '+212', '毛里塔尼亚': '+222', '吉布提': '+253', '索马里':\
                       '+252', '阿富汗': '+93', '科摩罗': '+269', '印度': '+91', '澳门': '+853', '其他': '0'}
+        # 验证码输入框
+        verifi_code = "com.bianla.international:id/et"
+        # 密码设置
+        pass_word = "com.bianla.international:id/pwd_editText"
+        # 密码确认按钮
+        pass_word_confirm = "com.bianla.international:id/signup_sent_verificationcode_btn"
+        # 完善资料
+        # 头像男
+        man = "com.bianla.international:id/iv_man_mark"
+        # 头像女
+        women = "com.bianla.international:id/iv_woman_mark"
+        # 生日栏位
+        birthday = "com.bianla.international:id/tv_birthday"
+        # 生日确认
+        birthday_confirm = "com.bianla.international:id/confirm"
+        # 身高输入
+        height = "com.bianla.international:id/et_edit_height"
+        # 昵称
+        nick_name = "com.bianla.international:id/et_edit_nickName"
+        # 资料设置完成按钮
+        information_confirm = "com.bianla.international:id/btn_edit_submit"
+        # 首页工具按钮
+        class_home_button = "android.widget.LinearLayout"
+
 
 class MetaWellTest(unittest.TestCase):
     #d = atx.connect('3487e851')
@@ -60,7 +84,7 @@ class MetaWellTest(unittest.TestCase):
         self.d.app_start("com.bianla.international")
         #self.d.start_app("com.bianla.international")
 
-    def test_startPagecheck(self):
+    def test_a_startPagecheck(self):
         '''登录注册页面元素检查'''
         # 启动页检查
         lognin = self.d(resourceId=self.cnt.login_button_id)
@@ -144,8 +168,66 @@ class MetaWellTest(unittest.TestCase):
             logger().info("注册页面国家对比失败")
             raise
         self.d.press("back")
+        self.d.press("back")
+
+    def test_b_sign(self):
+        '''注册流程测试'''
+        phone_number = "13"+str(int(time.time()/10))
+        nick_name = "test昵称123"
+        height = "167"
+        birthday = "04/18/1988"
+        logger().info("点击注册")
+        self.d(resourceId=self.cnt.sign_button_id).click()
+        logger().info("输入手机号:"+phone_number)
+        self.d(resourceId=self.cnt.register_phone_field).send_keys(phone_number)
+        logger().info("获取验证码")
+        self.d(resourceId=self.cnt.send_verification).click()
+        logger().info("输入验证码:"+"1234")
+        self.d(resourceId=self.cnt.verifi_code).send_keys("1234")
+        logger().info("设置密码:123456")
+        self.d(resourceId=self.cnt.pass_word).send_keys("123456")
+        logger().info("确认密码")
+        self.d(resourceId=self.cnt.pass_word_confirm).click()
+        logger().info("选择头像")
+        self.d(resourceId=self.cnt.man).click()
+        logger().info("设置生日")
+        self.d(resourceId=self.cnt.birthday).click()
+        self.d(resourceId=self.cnt.birthday_confirm).click()
+        logger().info("设置身高")
+        self.d(resourceId=self.cnt.height).send_keys(height)
+        self.d.press("back")
+        logger().info("设置昵称")
+        self.d(resourceId=self.cnt.nick_name).send_keys(nick_name)
+        self.d.press("back")
+        logger().info("个人信息确认")
+        self.d(resourceId=self.cnt.information_confirm).click()
+        logger().info("进入我的页面")
+        self.d(className="android.widget.LinearLayout", instance=18).click()
+        self.d(text=u"编辑资料").click()
+        logger().info("昵称检查")
+        try:
+            self.assertEqual(nick_name, self.d(resourceId="com.bianla.international:id/et_edit_nick").get_text())
+            logger().info("昵称与设置一致")
+        except AssertionError:
+            logger().error("昵称与注册设置不一致")
+            raise
+        logger().info("身高检查")
+        try:
+            self.assertEqual(height, self.d(resourceId="com.bianla.international:id/et_edit_height").get_text())
+            logger().info("身高与设置一致")
+        except AssertionError:
+            logger().error("身高与注册设置不一致")
+            raise
+        logger().info("生日检查")
+        try:
+            self.assertEqual(birthday, self.d(resourceId="com.bianla.international:id/tv_birthday").get_text())
+            logger().info("生日与设置一致")
+        except AssertionError:
+            logger().error("生日与注册设置不一致")
+            raise
 
     def tearDown(self):
+        print("结束")
         self.d.app_stop("com.bianla.international")
         #self.d.stop_app("com.bianla.international")
 
@@ -162,7 +244,7 @@ runner = HTMLReport.TestRunner(report_file_name='MetaWell',  # 报告文件名�
                                title='变啦国际测试报告',  # 报告标题，默认“测试报告”
                                description='无测试描述',  # 报告描述，默认“测试描述”
                                thread_count=1,  # 并发线程数量（无序执行测试），默认数量 1
-                               thread_start_wait=3,  # 各线程启动延迟，默认 0 s
+                               thread_start_wait=1,  # 各线程启动延迟，默认 0 s
                                sequential_execution=True,  # 是否按照套件添加(addTests)顺序执行，
                                # 会等待一个addTests执行完成，再执行下一个，默认 False
                                # 如果用例中存在 tearDownClass ，建议设置为True，
