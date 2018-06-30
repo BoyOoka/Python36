@@ -74,15 +74,15 @@ class Control(object):
 
 
 class MetaWellTest(unittest.TestCase):
-    #d = atx.connect('3487e851')
+    d = atx.connect('3487e851')
     #d = u2.connect('192.168.191.2')
-    d = u2.connect('192.168.1.53')
+    #d = u2.connect('192.168.1.53')
     hrp = htmlreport.HTMLReport(d)
     #hrp.patch_click()
     cnt = Control
     def setUp(self):
-        self.d.app_start("com.bianla.international")
-        #self.d.start_app("com.bianla.international")
+        #self.d.app_start("com.bianla.international")
+        self.d.start_app("com.bianla.international")
 
     def test_a_startPagecheck(self):
         '''登录注册页面元素检查'''
@@ -228,8 +228,8 @@ class MetaWellTest(unittest.TestCase):
 
     def tearDown(self):
         print("结束")
-        self.d.app_stop("com.bianla.international")
-        #self.d.stop_app("com.bianla.international")
+        #self.d.app_stop("com.bianla.international")
+        self.d.stop_app("com.bianla.international")
 
 # 测试套件
 suite = unittest.TestSuite()
