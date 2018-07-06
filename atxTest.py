@@ -8,7 +8,7 @@ appInfo = d.current_app()
 c = atx.adb_client
 print(c.devices())
 print(appInfo)
-pid = str(appInfo['pid'])
+pid = str(appInfo['package'])
 
 
 show_btn_login_in = d(resourceId='com.bianla.international:id/show_btn_login_in')
@@ -22,6 +22,6 @@ login_password_et.set_text("123456")
 login_button = d(resourceId = 'com.bianla.international:id/login')
 login_button.click()
 d.adb_shell('kill '+pid)
-#d.stop_app()
+d.stop_app("com.bianla.international")
 
 
