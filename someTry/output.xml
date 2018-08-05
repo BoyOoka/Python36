@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180805 20:03:41.400">
+<suite id="s1" name="Test" source="G:\Python36\someTry\test.robot">
+<test id="s1-t1" name="demo">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${d}/2</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180805 20:03:42.897" level="INFO">${a} = 500.0</msg>
+<status status="PASS" starttime="20180805 20:03:42.896" endtime="20180805 20:03:42.897"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<status status="PASS" starttime="20180805 20:03:42.897" endtime="20180805 20:03:42.897"></status>
+</kw>
+<kw name="Open Excel" library="ExcelRobot">
+<doc>Opens the Excel file to read from the path provided in the file path parameter.</doc>
+<arguments>
+<arg>test.xlsx</arg>
+</arguments>
+<msg timestamp="20180805 20:03:42.898" level="INFO">Opening file at G:\Python36\someTry\test.xlsx</msg>
+<status status="PASS" starttime="20180805 20:03:42.898" endtime="20180805 20:03:42.903"></status>
+</kw>
+<kw name="Read Cell Data By Name" library="ExcelRobot">
+<doc>Uses the cell name to return the data from that cell.</doc>
+<arguments>
+<arg>Sheet1</arg>
+<arg>A1</arg>
+</arguments>
+<assign>
+<var>${a1}</var>
+</assign>
+<msg timestamp="20180805 20:03:42.904" level="INFO">${a1} = jsajlgdsl</msg>
+<status status="PASS" starttime="20180805 20:03:42.903" endtime="20180805 20:03:42.904"></status>
+</kw>
+<kw name="Read Cell Data" library="ExcelRobot">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>Sheet1</arg>
+<arg>1</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${cell}</var>
+</assign>
+<msg timestamp="20180805 20:03:42.904" level="INFO">${cell} = 见风使舵垃圾分类开始</msg>
+<status status="PASS" starttime="20180805 20:03:42.904" endtime="20180805 20:03:42.904"></status>
+</kw>
+<kw name="Get Sheet Names" library="ExcelRobot">
+<doc>Returns the names of all the worksheets in the current workbook.</doc>
+<assign>
+<var>@{sheetName}</var>
+</assign>
+<msg timestamp="20180805 20:03:42.905" level="INFO">@{sheetName} = [ Sheet1 | 表er | Sheet3 ]</msg>
+<status status="PASS" starttime="20180805 20:03:42.905" endtime="20180805 20:03:42.905"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>@{sheetName}[2]</arg>
+</arguments>
+<status status="PASS" starttime="20180805 20:03:42.905" endtime="20180805 20:03:42.905"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20180805 20:03:42.906" endtime="20180805 20:03:42.906"></status>
+</kw>
+<kw name="Open Excel To Write" library="ExcelRobot">
+<doc>Opens the Excel file to write from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>test.xlsx</arg>
+</arguments>
+<msg timestamp="20180805 20:03:42.907" level="INFO">Opening file at G:\Python36\someTry\test.xlsx</msg>
+<status status="PASS" starttime="20180805 20:03:42.906" endtime="20180805 20:03:42.939"></status>
+</kw>
+<kw name="Write To Cell By Name" library="ExcelRobot">
+<doc>Write data to cell by using the given sheet name and the given cell that defines by name.</doc>
+<arguments>
+<arg>Sheet1</arg>
+<arg>A2</arg>
+<arg>this is a fjsdlk</arg>
+</arguments>
+<status status="PASS" starttime="20180805 20:03:42.940" endtime="20180805 20:03:42.940"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<status status="PASS" starttime="20180805 20:03:42.941" endtime="20180805 20:03:42.941"></status>
+</kw>
+<kw name="Save Excel" library="ExcelRobot">
+<doc>Saves the Excel file that was opened to write before.</doc>
+<status status="PASS" starttime="20180805 20:03:42.942" endtime="20180805 20:03:42.978"></status>
+</kw>
+<status status="PASS" starttime="20180805 20:03:42.896" endtime="20180805 20:03:42.978" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180805 20:03:41.408" endtime="20180805 20:03:42.979"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

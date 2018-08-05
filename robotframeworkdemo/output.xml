@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180729 18:31:28.371">
+<suite id="s1" name="Suit2" source="G:\Python36\robotframeworkdemo\suit2.txt">
+<test id="s1-t1" name="testcase1">
+<kw name="Open Application">
+<arguments>
+<arg>&amp;{desired_caps}</arg>
+</arguments>
+<msg timestamp="20180729 18:31:28.407" level="FAIL">No keyword with name 'Open Application' found.</msg>
+<status status="FAIL" starttime="20180729 18:31:28.407" endtime="20180729 18:31:28.407"></status>
+</kw>
+<status status="FAIL" starttime="20180729 18:31:28.405" endtime="20180729 18:31:28.408" critical="yes">No keyword with name 'Open Application' found.</status>
+</test>
+<test id="s1-t2" name="testcase2">
+<status status="FAIL" starttime="20180729 18:31:28.409" endtime="20180729 18:31:28.409" critical="yes">Test case contains no keywords.</status>
+</test>
+<test id="s1-t3" name="testcase3">
+<status status="FAIL" starttime="20180729 18:31:28.410" endtime="20180729 18:31:28.410" critical="yes">Test case contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20180729 18:31:28.378" endtime="20180729 18:31:28.411"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" id="s1" name="Suit2">Suit2</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180729 18:31:28.378" level="ERROR">Error in file 'G:\Python36\robotframeworkdemo\suit2.txt': Setting variable '&amp;{desired_caps}' failed: Dictionary item 'platformName' does not contain '=' separator.</msg>
+</errors>
+</robot>
