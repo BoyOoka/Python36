@@ -2,9 +2,10 @@ import atx
 import uiautomator2 as u2
 import time
 
-#d = atx.connect('3487e851')
-d = u2.connect('8cba2bb')
-d.app_start('com.example.helloworld')
+d = atx.connect('3487e851')
+#d = u2.connect('8cba2bb')
+#d.app_start('com.example.helloworld')
+d.start_app('com.example.helloworld')
 
 d(resourceId="com.example.helloworld:id/button1").click()
 d.toast.get_message(5.0, default="test")
