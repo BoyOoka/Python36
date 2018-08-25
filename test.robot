@@ -1,6 +1,6 @@
 *** Settings ***
 Library           ExcelRobot
-
+Resource          rc.robot
 *** Variables ***
 ${d}              1000
 
@@ -19,3 +19,4 @@ demo
     write to cell by name    Sheet1      A2     this is a fjsdlk
     log to console  2
     save excel
+    print something  我输入了一些东西

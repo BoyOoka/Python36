@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180805 20:03:41.400">
-<suite id="s1" name="Test" source="G:\Python36\someTry\test.robot">
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180825 13:52:08.618">
+<suite id="s1" name="Test" source="G:\Python36d\test.robot">
 <test id="s1-t1" name="demo">
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -10,23 +10,23 @@
 <assign>
 <var>${a}</var>
 </assign>
-<msg timestamp="20180805 20:03:42.897" level="INFO">${a} = 500.0</msg>
-<status status="PASS" starttime="20180805 20:03:42.896" endtime="20180805 20:03:42.897"></status>
+<msg timestamp="20180825 13:52:10.129" level="INFO">${a} = 500.0</msg>
+<status status="PASS" starttime="20180825 13:52:10.128" endtime="20180825 13:52:10.129"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${a}</arg>
 </arguments>
-<status status="PASS" starttime="20180805 20:03:42.897" endtime="20180805 20:03:42.897"></status>
+<status status="PASS" starttime="20180825 13:52:10.129" endtime="20180825 13:52:10.129"></status>
 </kw>
 <kw name="Open Excel" library="ExcelRobot">
 <doc>Opens the Excel file to read from the path provided in the file path parameter.</doc>
 <arguments>
 <arg>test.xlsx</arg>
 </arguments>
-<msg timestamp="20180805 20:03:42.898" level="INFO">Opening file at G:\Python36\someTry\test.xlsx</msg>
-<status status="PASS" starttime="20180805 20:03:42.898" endtime="20180805 20:03:42.903"></status>
+<msg timestamp="20180825 13:52:10.130" level="INFO">Opening file at G:\Python36d\test.xlsx</msg>
+<status status="PASS" starttime="20180825 13:52:10.130" endtime="20180825 13:52:10.134"></status>
 </kw>
 <kw name="Read Cell Data By Name" library="ExcelRobot">
 <doc>Uses the cell name to return the data from that cell.</doc>
@@ -37,8 +37,8 @@
 <assign>
 <var>${a1}</var>
 </assign>
-<msg timestamp="20180805 20:03:42.904" level="INFO">${a1} = jsajlgdsl</msg>
-<status status="PASS" starttime="20180805 20:03:42.903" endtime="20180805 20:03:42.904"></status>
+<msg timestamp="20180825 13:52:10.135" level="INFO">${a1} = jsajlgdsl</msg>
+<status status="PASS" starttime="20180825 13:52:10.135" endtime="20180825 13:52:10.135"></status>
 </kw>
 <kw name="Read Cell Data" library="ExcelRobot">
 <doc>Uses the column and row to return the data from that cell.</doc>
@@ -50,38 +50,38 @@
 <assign>
 <var>${cell}</var>
 </assign>
-<msg timestamp="20180805 20:03:42.904" level="INFO">${cell} = 见风使舵垃圾分类开始</msg>
-<status status="PASS" starttime="20180805 20:03:42.904" endtime="20180805 20:03:42.904"></status>
+<msg timestamp="20180825 13:52:10.136" level="INFO">${cell} = 见风使舵垃圾分类开始</msg>
+<status status="PASS" starttime="20180825 13:52:10.135" endtime="20180825 13:52:10.136"></status>
 </kw>
 <kw name="Get Sheet Names" library="ExcelRobot">
 <doc>Returns the names of all the worksheets in the current workbook.</doc>
 <assign>
 <var>@{sheetName}</var>
 </assign>
-<msg timestamp="20180805 20:03:42.905" level="INFO">@{sheetName} = [ Sheet1 | 表er | Sheet3 ]</msg>
-<status status="PASS" starttime="20180805 20:03:42.905" endtime="20180805 20:03:42.905"></status>
+<msg timestamp="20180825 13:52:10.136" level="INFO">@{sheetName} = [ Sheet1 | 表er | Sheet3 ]</msg>
+<status status="PASS" starttime="20180825 13:52:10.136" endtime="20180825 13:52:10.136"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>@{sheetName}[2]</arg>
 </arguments>
-<status status="PASS" starttime="20180805 20:03:42.905" endtime="20180805 20:03:42.905"></status>
+<status status="PASS" starttime="20180825 13:52:10.137" endtime="20180825 13:52:10.137"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>1</arg>
 </arguments>
-<status status="PASS" starttime="20180805 20:03:42.906" endtime="20180805 20:03:42.906"></status>
+<status status="PASS" starttime="20180825 13:52:10.137" endtime="20180825 13:52:10.138"></status>
 </kw>
 <kw name="Open Excel To Write" library="ExcelRobot">
 <doc>Opens the Excel file to write from the path provided in the file name parameter.</doc>
 <arguments>
 <arg>test.xlsx</arg>
 </arguments>
-<msg timestamp="20180805 20:03:42.907" level="INFO">Opening file at G:\Python36\someTry\test.xlsx</msg>
-<status status="PASS" starttime="20180805 20:03:42.906" endtime="20180805 20:03:42.939"></status>
+<msg timestamp="20180825 13:52:10.138" level="INFO">Opening file at G:\Python36d\test.xlsx</msg>
+<status status="PASS" starttime="20180825 13:52:10.138" endtime="20180825 13:52:10.178"></status>
 </kw>
 <kw name="Write To Cell By Name" library="ExcelRobot">
 <doc>Write data to cell by using the given sheet name and the given cell that defines by name.</doc>
@@ -90,22 +90,35 @@
 <arg>A2</arg>
 <arg>this is a fjsdlk</arg>
 </arguments>
-<status status="PASS" starttime="20180805 20:03:42.940" endtime="20180805 20:03:42.940"></status>
+<status status="PASS" starttime="20180825 13:52:10.178" endtime="20180825 13:52:10.179"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<status status="PASS" starttime="20180805 20:03:42.941" endtime="20180805 20:03:42.941"></status>
+<status status="PASS" starttime="20180825 13:52:10.179" endtime="20180825 13:52:10.179"></status>
 </kw>
 <kw name="Save Excel" library="ExcelRobot">
 <doc>Saves the Excel file that was opened to write before.</doc>
-<status status="PASS" starttime="20180805 20:03:42.942" endtime="20180805 20:03:42.978"></status>
+<status status="PASS" starttime="20180825 13:52:10.180" endtime="20180825 13:52:10.216"></status>
 </kw>
-<status status="PASS" starttime="20180805 20:03:42.896" endtime="20180805 20:03:42.978" critical="yes"></status>
+<kw name="Print Something" library="rc">
+<arguments>
+<arg>我输入了一些东西</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${something}</arg>
+</arguments>
+<status status="PASS" starttime="20180825 13:52:10.217" endtime="20180825 13:52:10.217"></status>
+</kw>
+<status status="PASS" starttime="20180825 13:52:10.217" endtime="20180825 13:52:10.218"></status>
+</kw>
+<status status="PASS" starttime="20180825 13:52:10.128" endtime="20180825 13:52:10.218" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20180805 20:03:41.408" endtime="20180805 20:03:42.979"></status>
+<status status="PASS" starttime="20180825 13:52:08.623" endtime="20180825 13:52:10.219"></status>
 </suite>
 <statistics>
 <total>

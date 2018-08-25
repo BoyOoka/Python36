@@ -10,6 +10,7 @@ ${b}              4
 
 *** Test Cases ***
 login
+    ${test}  get value from user
     Open Application    http://127.0.0.1:4723/wd/hub    platformName=Android    platformVersion=7.1.1    deviceName=test    appPackge=com.bianla.tangba    app=G:/Python36/apk/tangba.apk
     ...    noReset=true
     ${window_height}    Get Window Height
