@@ -1,6 +1,7 @@
 *** Settings ***
 Library           ExcelRobot
 Resource          rc.robot
+Resource          test.py
 *** Variables ***
 ${d}              1000
 
